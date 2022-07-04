@@ -8,6 +8,78 @@
     <body>
         <h3>자바스트립트</h3>
         <p><strong>javascript</strong>는 가벼운, 인터프리터 혹은 just-in-time 컴파일 프로그래밍 언어로, 일급 함수를 지원합니다. 웹 페이지를 위한 스크립트 언어로 잘 알려져 있지만, Node.js, Apache CouchDB, Adobe Acrobat처럼 많은 비 브라우저 환경에서도 사용하고 있습니다. JavaScript는 프로토타입 기반, 다중 패러다임, 단일 스레드, 동적 언어로, 객체지향형, 명령형, 선언형(함수형 프로그래밍 등) 스타일을 지원합니다. 자세한 내용은 JavaScript에 대하여를 참고하세요.</p>
-        <input type="button" value="공부하기">
+        <script src="js/index01.js"></script>
+        <input type="button" value="공부하기" onclick="clickButton()" />
+
+        <input type="button" value="night" onclick="darkMode()"/>
+        <input type="button" value="night" onclick="rightMode()"/>
+
+        <h2>숫자형</h2>
+        <script>
+            let number1 = 4;
+            let number2 = 8;
+            document.write(number1 + number2);
+            document.write("<br>");
+            document.write(number1 - number2 );
+            document.write("<br>");
+            document.write(number1 % number2);
+            document.write("<br>");
+            document.write(number1 * number2);
+            document.write("<br>");
+
+            //Math
+            //PI : 프로퍼티
+            document.write(Math.PI);
+            document.write("<br>");
+            // ceil() : 메서드
+            document.write(Math.ceil(3.14159));
+            document.write("<br>");
+            document.write(Math.pow(2, 3));
+            document.write("<br>");
+        </script>
+        <h2>문자열</h2>
+        <script>
+            document.write("Hello, world!");
+            document.write("<br>");
+            document.write("Hello, \
+            world!");
+            document.write("<br>");
+            document.write(`Hello, \
+            world!`); //템플릿 리터럴(백틱사용)
+            //ES6에서부터 백틱을 사용하기 시작함.
+            document.write("<br>");
+            // 배열을 선언, 리스트
+            let array1 = ["a", "b", "C", "d"];
+            // 인덱싱
+            document.write(array1[0]);
+            document.write("<br>");
+            document.write(array1[3]);
+            document.write("<br>");
+            document.write(array1[-1]); // undefined
+            document.write("<br>");
+            document.write("Hello, world!"[0]);
+            document.write("<br>");
+            // String의 유용
+            let helloworld = "Hellow, world!";
+            document.write(helloworld.slice(0, 4));
+            document.write("<br>");
+        </script>
+        <h2>함수</h2>
+        <script>
+            function printText(text) {
+                document.write(text);
+                document.write("<br>");
+                return "함수가 변환해주는 값";
+            }
+            document.write(printText("매개변수에 값을 넘겨주기"));
+            document.write("<br>");
+
+            //익명함수
+            let returnSomething = function() {
+                return 123;
+            }
+            document.write(returnSomething());
+            document.write("<br>");
+        </script>
     </body>
 </html>
